@@ -28,13 +28,13 @@ def get_review_data():
     validate_data(review_data)
 
 def validate_data(values):
-    print(values)
     """
     Converts all string values to integers.
     Raises ValueError if strings cannot be converted to int,
     or if there aren't exactly 4 values.
     """
     try:
+        [int(value) for value in values]
         if len(values) != 4:
             raise ValueError(
                 f"Exactly 4 values required, you provided {len(values)}"
