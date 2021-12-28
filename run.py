@@ -17,21 +17,27 @@ def get_review_data():
     """
     Get review score input from user
     """
-    print("Please enter your review scores for Service Food Cleanliness and Staff")
-    print("Scores should be between 1 and 5. 5 being the best and 1 being the worse")
-    print("Example: 5,4,4,5,3\n")
+    while True:
+        print("Please enter your review scores for Service Food Cleanliness and Staff")
+        print("Scores should be between 1 and 5. 5 being the best and 1 being the worse")
+        print("Example: 5,4,4,5,3\n")
 
-    data_str = input("Enter your data here: ")
-    print(f"The data provided is {data_str}")
+        data_str = input("Enter your data here: ")
 
-    review_data = data_str.split(",")
-    validate_data(review_data)
+        review_data = data_str.split(",")
+
+        if validate_data(review_data):
+            print("Data is valid!")
+            break
+
+    return review_data
+
 
 def validate_data(values):
     """
-    Converts all string values to integers.
-    Raises ValueError if strings cannot be converted to int,
-    or if there aren't exactly 4 values.
+    Inside the try, converts all string values into integers.
+    Raises ValueError if strings cannot be converted into int,
+    or if there aren't exactly 6 values.
     """
     try:
         [int(value) for value in values]
@@ -41,9 +47,9 @@ def validate_data(values):
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
+        return False
+
+    return True
 
 
-
-get_review_data()  
-
-
+data = get_review_data()
