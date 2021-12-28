@@ -52,4 +52,15 @@ def validate_data(values):
     return True
 
 
+def update_review_worksheet(data):
+    """
+    update review worksheet, add a new row with the data input
+    """
+    print("Adding your review......\n")
+    review_worksheet = SHEET.worksheet("review")
+    review_worksheet.append_row(data)
+    print("Review added sucessfully.\n")
+
 data = get_review_data()
+review_data = [int(num) for num in data]
+update_review_worksheet(review_data)
