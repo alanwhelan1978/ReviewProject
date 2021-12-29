@@ -18,8 +18,9 @@ def get_review_data():
     Get review score input from user
     """
     while True:
-        print("Please enter your review scores for Service Food Cleanliness and Staff")
-        print("Scores should be between 1 and 5. 5 being the best and 1 being the worse")
+        print("Please enter a review for Service Food Cleanliness and Staff")
+        print("Scores should be between 1 and 5.")
+        print("5 being the best and 1 being the worse")
         print("Example: 5,4,4,5\n")
 
         data_str = input("Enter your data here: \n")
@@ -32,12 +33,13 @@ def get_review_data():
 
     return review_data
 
+
 def validate_data(values):
     """
     Inside the try, converts all string values into integers.
-    Raises ValueError if strings cannot be converted into int,
-    or if there aren't exactly 4 values. Also stops user 
-    adding integers higher than 5
+    Raises ValueError if strings cannot be converted into
+    integers or if there aren't exactly 4 values. Also
+    stops user adding integers higher than 5
     """
     try:
         a = [int(value) for value in values]
@@ -46,17 +48,14 @@ def validate_data(values):
                 f"Exactly 4 values required, you provided {len(values)}"
             )
         for value in a:
-            if value not in list(range(1,6)):
-                raise ValueError(
-                    "Score needs to be between 1 and 5\n"
-                )
-                
+            if value not in list(range(1, 6)):
+                raise ValueError("Score needs to be between 1 and 5\n")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
 
         return False
-    
     return True
+
 
 def update_review_worksheet(data):
     """
