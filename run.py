@@ -22,7 +22,7 @@ def get_review_data():
         print("Scores should be between 1 and 5. 5 being the best and 1 being the worse")
         print("Example: 5,4,4,5\n")
 
-        data_str = input("Enter your data here: ")
+        data_str = input("Enter your data here: \n")
 
         review_data = data_str.split(",")
 
@@ -31,9 +31,6 @@ def get_review_data():
             break
 
     return review_data
-
-x = 1
-n = 5
 
 def validate_data(values):
     """
@@ -51,7 +48,7 @@ def validate_data(values):
         for value in a:
             if value not in list(range(1,6)):
                 raise ValueError(
-                    "Score needs to be between 1 and 5"
+                    "Score needs to be between 1 and 5\n"
                 )
                 
     except ValueError as e:
