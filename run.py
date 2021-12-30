@@ -19,8 +19,13 @@ def get_review_data():
     """
     while True:
         print("Please enter a review for Service Food Cleanliness and Staff")
+<<<<<<< HEAD
         print("Scores should be between 1 and 5.")
         print("Numbers need to be seperated by a comma")
+=======
+        print("Reviews will be 4 numbers between 1 and 5")
+        print("These numbers need to be seperated by a comma")
+>>>>>>> 2cb03f1a6f9851c66925c1669f967b745542019f
         print("5 being the best and 1 being the worse")
         print("Example: 5,4,4,5\n")
 
