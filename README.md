@@ -4,11 +4,13 @@
 
 [Git Hub Repo](https://github.com/alanwhelan1978/ReviewProject)
 
-This project is designed for the user / customer to be able to add all review data to a google work sheet and see at a glance where their service level works and where their service levels are letting them down.
+This project is designed for the user / customer to be able to add all review data to a google work sheet and see at a glance where their service level works and where their service levels are letting them down. 
 
 ## How to use:
 
-The user simply has to enter the 4 review scores into the terminal and seperate the numbers by a comma. Once this is done the data is then passed to a google sheet where this data can then be analysed.
+The user simply has to enter the 4 review scores into the terminal and seperate the numbers by a comma. Once this is done the data is then passed to a google sheet where this data can then be analysed.The data is input by the user and it is validated and then sent to the work sheet
+
+![Useage](readmefiles/Review-Project.png)
 
 ## Features
 
