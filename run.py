@@ -20,6 +20,7 @@ def get_review_data():
     while True:
         print("Please enter a review for Service Food Cleanliness and Staff")
         print("Scores should be between 1 and 5.")
+        print("Numbers need to be seperated by a comma")
         print("5 being the best and 1 being the worse")
         print("Example: 5,4,4,5\n")
 
@@ -51,7 +52,7 @@ def validate_data(values):
             if value not in list(range(1, 6)):
                 raise ValueError("Score needs to be between 1 and 5\n")
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+        print("Invalid data: please try again.\n")
 
         return False
     return True
