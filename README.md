@@ -4,6 +4,8 @@
 
 [Git Hub Repo](https://github.com/alanwhelan1978/ReviewProject)
 
+![View](readmefiles/project-view.png)
+
 This project is designed for the user / customer to be able to add all review data to a google work sheet and see at a glance where their service level works and where their service levels are letting them down. 
 
 ## How to use:
